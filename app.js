@@ -37,6 +37,17 @@ var sampleData = { Title: 'Schindler: The Real Story',
   Response: 'True' 
 };
 
-console.log(sampleData);
+var express = require("express");
+var app = express();
+
+app.use(express.static("public"));
+
+app.get("/", function(req, res){
+  res.render("home.ejs", {data: sampleData});
+})
+
+app.listen(process.env.PORT, process.env.IP, function(){
+ console.log("server started");
+})
 
 //using sample data not to ovruse api key given to me
