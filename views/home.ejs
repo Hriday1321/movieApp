@@ -8,6 +8,12 @@
 
 <h1>HOMEE</h1>
 
-<li> <%= data["Plot"] %> </li>
+
+
+<ul>
+    <% for(var i = 0; i < 10; i++){ %>
+        <li> <%= data["Plot"] %> </li>
+    <% } %>
+</ul>
 
 <%- include('./partials/footer.ejs') %>
