@@ -8,12 +8,20 @@
 
 <h1>HOMEE</h1>
 
-
-
-<ul>
-    <% for(var i = 0; i < 10; i++){ %>
-        <li> <%= data["Plot"] %> </li>
+<div class="container">
+    <ul>
+    <% for(var i = 0; i < 5; i++){ %>
+        <div class="f">
+                <div class="lfl">
+                    <img src="<%= data["Poster"] %>">
+                </div>
+                <div class="rfl">
+                    <%= data["Plot"] %>
+                </div>
+        </div>
+        
     <% } %>
-</ul>
+    </ul>
+</div>
 
 <%- include('./partials/footer.ejs') %>
