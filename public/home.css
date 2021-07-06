@@ -2,3 +2,37 @@ body{
     background-color: #555555;
     color: #eeeeee;
 }
+
+h1{
+    text-align: center;
+    width: 100%;
+}
+
+.container{
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+}
+
+.f{
+    display: flex;
+    justify-content: center;
+    float: left;
+}
+
+.f:nth-child(2n + 1){
+	background: #888888;
+}
+
+.f:nth-child(2n){
+	background: #666666;
+}
+
+.lfl{
+    flex: 0.4;
+}
+
+.rfl{
+    flex: 0.6;
+    margin-top: 2%;
+}
