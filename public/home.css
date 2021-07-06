@@ -1,6 +1,7 @@
 body{
     background-color: #555555;
     color: #eeeeee;
+    font-family: monospace;
 }
 
 h1{
@@ -35,4 +36,11 @@ h1{
 .rfl{
     flex: 0.6;
     margin-top: 2%;
+    margin-right: 2%;
 }
+
+.title{
+    text-align: center; 
+    font-size: 2rem;
+}    
+
