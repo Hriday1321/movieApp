@@ -10,7 +10,7 @@
 
 <div class="container">
     <ul>
-    <% for(var i = 0; i < 5; i++){ %>
+    <% data["Search"].forEach(function(data){ %>
         <div class="f">
                 <div class="lfl">
                     <img src="<%= data["Poster"] %>">
@@ -24,30 +24,15 @@
                             Year Released: <%= data["Year"] %>
                         </p>
                     </div>
-                    <div class="genre">
+                    <div class="type">
                         <p>
-                            Genre: <%= data["Genre"] %>
-                        </p>
-                    </div>
-                    <div class="actors">
-                        <p>
-                            Actors: <%= data["Actors"] %>
-                        </p>
-                    </div>
-                    <div class="rating">
-                        <p>
-                            IMDB Rating: <%= data["imdbRating"] %>
-                        </p>
-                    </div>
-                    <div class="plot">
-                        <p>
-                            Plot: <%= data["Plot"] %>
+                            Type: <%= data["Type"] %>
                         </p>
                     </div>
                 </div>
         </div>
         
-    <% } %>
+    <% }) %>
     </ul>
 </div>
 
