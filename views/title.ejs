@@ -1,0 +1,49 @@
+<%- include('./partials/header.ejs') %>
+    <title>
+        Home Page
+    </title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+
+<h1>Results by Title</h1>
+
+<div class="container">
+    <div class="f">
+            <div class="lfl">
+                <img src="<%= data["Poster"] %>">
+            </div>
+            <div class="rfl">
+                <div class="title">
+                    <%= data["Title"] %>
+                </div>
+                <div class="year">
+                    <p>
+                        Year Released: <%= data["Year"] %>
+                    </p>
+                </div>
+                <div class="genre">
+                    <p>
+                        Genre: <%= data["Genre"] %>
+                    </p>
+                </div>
+                <div class="actors">
+                    <p>
+                        Actors: <%= data["Actors"] %>
+                    </p>
+                </div>
+                <div class="rating">
+                    <p>
+                        IMDB Rating: <%= data["imdbRating"] %>
+                    </p>
+                </div>
+                <div class="plot">
+                    <p>
+                        Plot: <%= data["Plot"] %>
+                    </p>
+                </div>
+            </div>
+    </div>
+</div>
+
+<%- include('./partials/footer.ejs') %>

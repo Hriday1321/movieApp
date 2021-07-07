@@ -1,0 +1,39 @@
+<%- include('./partials/header.ejs') %>
+    <title>
+        Home Page
+    </title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+
+<h1>Results by searchE</h1>
+
+<div class="container">
+    <ul>
+    <% for(var i = 0; i < data["Search"].length; i++){ %>
+        <div class="f">
+                <div class="lfl">
+                    <img src="<%= data["Search"][i]["Poster"] %>">
+                </div>
+                <div class="rfl">
+                    <div class="title">
+                        <%= data["Search"][i]["Title"] %>
+                    </div>
+                    <div class="year">
+                        <p>
+                            Year Released: <%= data["Search"][i]["Year"] %>
+                        </p>
+                    </div>
+                    <div class="genre">
+                        <p>
+                            Type: <%= data["Search"][i]["Type"] %>
+                        </p>
+                    </div>
+                </div>
+        </div>
+        
+    <% } %>
+    </ul>
+</div>
+
+<%- include('./partials/footer.ejs') %>
