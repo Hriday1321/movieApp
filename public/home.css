@@ -9,6 +9,10 @@ h1{
     width: 100%;
 }
 
+input{
+    width: 100%;
+}
+
 .container{
     margin: 0 auto;
     width: 80%;
@@ -44,3 +48,10 @@ h1{
     font-size: 2rem;
 }    
 
+.left{
+    flex: 0.5;
+}
+
+.right{
+    flex: 0.5;
+}
