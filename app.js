@@ -46,5 +46,3 @@ app.get("/search", function(req,res){
 app.listen(process.env.PORT, process.env.IP, function(){
  console.log("server started");
 })
-
-//using sample data not to ovruse api key given to me
