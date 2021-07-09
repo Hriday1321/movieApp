@@ -11,13 +11,15 @@ h1{
 
 input{
     width: 80%;
-    height: 25px;
+    height: 10%;
     font-size: 1.5rem;
+    text-align: center;
     background: none;
     border: none;
     margin-left: 10px;
     margin-top: 10px;
-    color: #eeeeee;
+    color: #2c3e50;
+    text-transform: uppercase;
 }
 
 input:focus{
@@ -36,14 +38,15 @@ button{
     background: none;
     border: none;
     font-size: 1.5rem;
+    color: #2c3e50;
 }
 
 #container{
     margin: 0 auto;
     width: 80%;
     background: #bdc3c7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to bottom, #2c3e50, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2c3e50, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 10px;
 }
 
@@ -59,6 +62,9 @@ button{
 
 .lfl{
     flex: 0.4;
+    background:rgba(0,0,0,0);
+    background: -webkit-linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .rfl{
@@ -71,6 +77,7 @@ button{
     text-align: center; 
     font-size: 2rem;
     font-weight: 600;
+    text-decoration: underline;
 }    
 
 .left{
@@ -88,5 +95,12 @@ button{
 }
 
 ::placeholder{
-    color: #eeeeee;
+    color: #3c4e60;
+    opacity: 0.6;
+}
+
+#nav{
+    background: #eeeeee;
+    border-radius: 10px 10px 0px 0px;
+    padding-bottom: 10px;
 }
