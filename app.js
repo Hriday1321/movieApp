@@ -9,7 +9,7 @@ app.use(express.static("public"));
 
 var data;
 
-request("http://www.omdbapi.com/?apikey=298f6e5e&s=schindler", function (error, response, body) {
+request("http://www.omdbapi.com/?apikey=298f6e5e&s=batman", function (error, response, body) {
 	if(!error && response.statusCode == 200)
     {
        var tdata = JSON.parse(body);
