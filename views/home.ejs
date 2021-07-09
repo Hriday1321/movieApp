@@ -15,33 +15,37 @@
         <div class="left">
             <form action="/title" method="GET">
                 <input type="text" name="title" placeholder="Enter Title term">
-                <button>Submit</button>
+                <button><i class="fas fa-search"></i></button>
             </form>
         </div>
         <div class="right">
             <form action="/search" method="GET">
                 <input type="text" name='search' placeholder="Enter Search term">
-                <button>Submit</button>
+                <button><i class="fas fa-search"></i></button>
             </form>
         </div>
     </div>
     <% data["Search"].forEach(function(data){ %>
         <div class="f">
                 <div class="lfl">
-                    <img src="<%= data["Poster"] %>">
+                    <% if(data["Poster"] != "N/A"){ %>
+                    <img src="<%= data["Poster"] %>" width="300">
+                    <% }else{ %>
+                    <img src="https://www.freeiconspng.com/uploads/no-image-icon-6.png" width="300" alt="Icon No Download">
+                    <% } %>
                 </div>
                 <div class="rfl">
                     <div class="title">
-                        <%= data["Title"] %>
+                        <%= data["Title"].toUpperCase() %>
                     </div>
-                    <div class="year">
+                    <div class="content">
                         <p>
-                            Year Released: <%= data["Year"] %>
+                            <strong>Year Released:</strong> <%= data["Year"] %>
                         </p>
                     </div>
-                    <div class="type">
+                    <div class="content">
                         <p>
-                            Type: <%= data["Type"] %>
+                            <strong>Type:</strong> <%= data["Type"] %>
                         </p>
                     </div>
                 </div>
