@@ -1,58 +1,56 @@
 <%- include('./partials/header.ejs') %>
     <title>
-        Home Page
+        Find by Title Page
     </title>
     <link rel="stylesheet" href="/home.css">
 </head>
 <body>
-
-<h1>Results by Title</h1>
-
-<div class="left">
-    <form action="/title" method="GET">
-        <input type="text" name="title" placeholder="Enter Title term">
-        <button>Submit</button>
-    </form>
-</div>
-<div class="right">
-    <form action="/search" method="GET">
-        <input type="text" name='search' placeholder="Enter Search term">
-        <button>Submit</button>
-    </form>
-</div>
-
-<div class="container">
+<div id="container">
+    <div id="nav">
+        <div class="left">
+            <form action="/title" method="GET">
+                <input type="text" name="title" placeholder="Enter Title term">
+                <span><button><i class="fas fa-search"></i></button><span>
+            </form>
+        </div>
+        <div class="right">
+            <form action="/search" method="GET">
+                <input type="text" name='search' placeholder="Enter Search term">
+                <span><button><i class="fas fa-search"></i></button><span>
+            </form>
+        </div>
+    </div>
     <div class="f">
             <div class="lfl">
                 <img src="<%= data["Poster"] %>">
             </div>
             <div class="rfl">
                 <div class="title">
-                    <%= data["Title"] %>
+                    <%= data["Title"].toUpperCase() %>
                 </div>
-                <div class="year">
+                <div class="content">
                     <p>
-                        Year Released: <%= data["Year"] %>
+                        <strong>Year Released:</strong> <%= data["Year"] %>
                     </p>
                 </div>
-                <div class="genre">
+                <div class="content">
                     <p>
-                        Genre: <%= data["Genre"] %>
+                        <strong>Genre:</strong> <%= data["Genre"] %>
                     </p>
                 </div>
-                <div class="actors">
+                <div class="content">
                     <p>
-                        Actors: <%= data["Actors"] %>
+                        <strong>Actors:</strong> <%= data["Actors"] %>
                     </p>
                 </div>
-                <div class="rating">
+                <div class="content">
                     <p>
-                        IMDB Rating: <%= data["imdbRating"] %>
+                        <strong>IMDB Rating:</strong> <%= data["imdbRating"] %>
                     </p>
                 </div>
-                <div class="plot">
+                <div class="content">
                     <p>
-                        Plot: <%= data["Plot"] %>
+                        <strong>Plot:</strong> <%= data["Plot"] %>
                     </p>
                 </div>
             </div>
