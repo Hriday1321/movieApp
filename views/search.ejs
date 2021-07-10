@@ -1,28 +1,26 @@
 <%- include('./partials/header.ejs') %>
     <title>
-        Home Page
+        Find by Search Page
     </title>
     <link rel="stylesheet" href="/home.css">
 </head>
 <body>
 
-<h1>Results by Search</h1>
-
-<div class="left">
-    <form action="/title" method="GET">
-        <input type="text" name="title" placeholder="Enter Title term">
-        <button>Submit</button>
-    </form>
-</div>
-<div class="right">
-    <form action="/search" method="GET">
-        <input type="text" name='search' placeholder="Enter Search term">
-        <button>Submit</button>
-    </form>
-</div>
-
-<div class="container">
-    <ul>
+<div id="container">
+    <div id="nav">
+        <div class="left">
+            <form action="/title" method="GET">
+                <input type="text" name="title" placeholder="Enter Title term">
+                <span><button><i class="fas fa-search"></i></button><span>
+            </form>
+        </div>
+        <div class="right">
+            <form action="/search" method="GET">
+                <input type="text" name='search' placeholder="Enter Search term">
+                <span><button><i class="fas fa-search"></i></button><span>
+            </form>
+        </div>
+    </div>
     <% for(var i = 0; i < data["Search"].length; i++){ %>
         <div class="f">
                 <div class="lfl">
@@ -30,23 +28,21 @@
                 </div>
                 <div class="rfl">
                     <div class="title">
-                        <%= data["Search"][i]["Title"] %>
+                        <%= data["Search"][i]["Title"].toUpperCase() %>
                     </div>
-                    <div class="year">
+                    <div class="content">
                         <p>
-                            Year Released: <%= data["Search"][i]["Year"] %>
+                            <strong>Year Released:</strong> <%= data["Search"][i]["Year"] %>
                         </p>
                     </div>
-                    <div class="genre">
+                    <div class="content">
                         <p>
-                            Type: <%= data["Search"][i]["Type"] %>
+                            <strong>Type:</strong> <%= data["Search"][i]["Type"].toUpperCase() %>
                         </p>
                     </div>
                 </div>
         </div>
-        
     <% } %>
-    </ul>
 </div>
 
 <%- include('./partials/footer.ejs') %>
